@@ -1,0 +1,36 @@
+{
+    "tiddlers": {
+        "$:/themes/othy/motha/PopupSideBar": {
+            "title": "$:/themes/othy/motha/PopupSideBar",
+            "tags": "$:/tags/PageTemplate",
+            "list-before": "$:/core/ui/PageTemplate/alerts",
+            "text": "<$reveal type=\"popup\" state=\"$:/state/PopupSideBar\" class=\"tc-popup-keep\" retain=\"yes\" animate=\"yes\">\n<div class=\"motha-popup-sidebar\">\n\n<h1>\n<$transclude tiddler={{$:/state/PopupSideBarStatus!!selected}} field=\"caption\">\n{{$:/state/PopupSideBarStatus!!selected}}\n</$transclude>\n</h1>\n\n<$scrollable class=\"motha-popup-sidebar-scrollable\">\n<div class=\"motha-popup-sidebar-inside\">\n<$transclude tiddler={{$:/state/PopupSideBarStatus!!selected}}>\nError with the tiddler to transclude [[$:/state/PopupSideBarStatus!!selected}}\n</$transclude>\n</div>\n</$scrollable>\n\n</div>\n</$reveal>"
+        },
+        "$:/tags/SideBarSegment": {
+            "title": "$:/tags/SideBarSegment",
+            "list": "$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/tabs $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search"
+        },
+        "$:/themes/othy/motha/base": {
+            "title": "$:/themes/othy/motha/base",
+            "tags": "$:/tags/Stylesheet",
+            "text": "\n<$reveal type=\"nomatch\" state=\"$:/state/sidebar\" text=\"no\">\n.tc-story-river {\n    margin-right: calc({{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}} + 30px);\n}\n\n.tc-sidebar-scrollable {\n    <$reveal type=\"nomatch\" state=\"$:/state/sidebar\" text=\"no\">\n    background-color: <<colour tiddler-background>>;\n    </$reveal>\n}\n</$reveal>\n\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\t.tc-sidebar-scrollable {\n\t\tmargin: 0 0 0 -12px;\n    }\n}\n\n.tc-page-controls {\n    text-align: center;\n}\n\n.tc-search {\n    text-align: center;\n}\n\n.tc-tiddler-frame {\n    border: none;\n}\n\n.motha-popup-sidebar {\n    position: fixed;\n    top: 0;\n    right: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}};\n    bottom: 0;\n    width: 400px;\n    background-color: <<colour page-background>>;\n    border: solid 25px <<colour tiddler-title-foreground>>;\n    padding: 20px;\n    box-sizing: border-box;\n}\n\n.motha-popup-sidebar h1 {\n    text-align: center;\n}\n\n.motha-popup-sidebar-scrollable {\n    position: relative;\n    height: 85vh;\n}\n\n.motha-popup-sidebar-inside {\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n.motha-access-sidebar {\n    border-top: dashed 2px <<colour tiddler-title-foreground>>;\n    border-bottom: dashed 2px <<colour tiddler-title-foreground>>;\n    text-align: center;\n}\n"
+        },
+        "$:/core/ui/SideBar/Open": {
+            "title": "$:/core/ui/SideBar/Open",
+            "caption": "{{$:/language/SideBar/Open/Caption}}",
+            "tags": "$:/tags/SideBar",
+            "type": "text/vnd.tiddlywiki",
+            "text": "\\define lingo-base() $:/language/CloseAll/\n\n<div class=\"tc-sidebar-tab-open\">\n<$list filter=\"[list<tv-story-list>]\" history=<<tv-history-list>> storyview=\"pop\">\n<div class=\"tc-sidebar-tab-open-item\">\n<$button message=\"tm-close-tiddler\" tooltip={{$:/language/Buttons/Close/Hint}} aria-label={{$:/language/Buttons/Close/Caption}} class=\"tc-btn-insivible tc-btn-mini\">{{$:/core/images/close-button}}</$button>&nbsp;<$link to={{!!title}}><$view field=\"title\" /></$link>\n</div>\n</$list>\n<$button message=\"tm-close-all-tiddlers\" class=\"tc-btn-invisible tc-btn-mini\"><<lingo Button>></$button>\n</div>\n"
+        },
+        "$:/themes/othy/motha/readme": {
+            "title": "$:/themes/othy/motha/readme",
+            "type": "text/vnd.tiddlywiki",
+            "text": "This [[TW5|https://tiddlywiki.com/]] theme is inspired by [[Moments by Riz|https://ibnishak.github.io/Tesseract/themes/moments.html]]. I wrote it from scratch, to learn how to hack [[TW5|https://tiddlywiki.com]] and have a great theme, so it isn't a copy-paste, but a real rewrite. Please read the node below, and feel free to share your thoughts about it, or even [[hack it back|https://github.com/othelarian/tw5_motha]]! Look at the TW5 discord, you'll find me there.\n\nSee [[Github page|https://othelarian.github.io/tw5_motha/]] or [[the repo|https://github.com/othelarian/tw5_motha]] for more information.\n"
+        },
+        "$:/core/ui/SideBarSegments/tabs": {
+            "title": "$:/core/ui/SideBarSegments/tabs",
+            "tags": "$:/tags/SideBarSegment",
+            "text": "<div class=\"motha-access-sidebar\">\n<$list filter=\"[all[shadows+tiddlers]tag[$:/tags/SideBar]!has[draf.of]]\">\n\n<$button>\n<$action-popup $state=\"$:/state/PopupSideBar\" $coords=\"(0,0,0,0)\"/>\n<$action-setfield $tiddler=\"$:/state/PopupSideBarStatus\" $field=\"selected\" $value=<<currentTiddler>>/>\n<$transclude tiddler=<<currentTiddler>> field=\"caption\">\n{{!!title}}\n</$transclude>\n</$button>\n\n</$list>\n</div>\n"
+        }
+    }
+}

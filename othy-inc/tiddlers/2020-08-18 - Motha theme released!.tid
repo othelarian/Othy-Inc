@@ -1,0 +1,30 @@
+created: 20200818151422144
+creator: Othy
+modified: 20200818153546504
+modifier: Othy
+tags: Journal theme
+title: 2020-08-18 - Motha theme released!
+type: text/vnd.tiddlywiki
+
+Today is a great day, width two great news:
+
+* This is the beginning of this website!
+* The Motha theme for TW5 is out!
+
+There a lot in progress right now, like a plugin and some configuration and planification. But for the first is always one of the most important.
+
+!! Launch of this website
+
+There is a huge amount of work to make this website a bit more functionnal and welcoming, but at least it exists, and it's a big enough to be celebrate. I think I won't be able to finish the basic configuration, but it's ok as I'm confident in there won't be any visitor immediatly.
+
+!! The Motha theme
+
+For the first try, I made a very small and a bit quirky theme called Motha. Inspired by [[Moments by Riz|https://ibnishak.github.io/Tesseract/themes/moments.html]], I started from scratch to learn how to write plugins and themes for TW5.
+
+There is some issues with the theme, but it's a great experience to start hacking TW5. Every feedback will be welcomed, preferably with a PR on the related repo.
+
+You can find the description of this theme [[here|https://othelarian.github.io/tw5_motha/]], and the [[github repo here|https://github.com/othelarian/tw5_motha]].
+
+!! The future
+
+As coding a plugin or a theme can be really time consuming, there won't be a high rythm of delivery and news here, but as the main purpose of this website is to serve as a warehouse for what I code I think it's logic. Everything I will develop will be accessible from here, and I have also in mind a project to make this website a little bit more fun to use. Let's see what tomorrow is made of.

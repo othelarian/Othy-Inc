@@ -1,0 +1,13 @@
+author: othelarian
+core-version: >=5.1.21
+created: 20200818150936840
+dependents: $:/themes/tiddlywiki/vanilla
+description: A theme for TW5, inspired by Moments
+list: readme
+modified: 20200818150936840
+name: Motha
+plugin-type: theme
+source: https://github.com/othelarian/tw5_motha
+title: $:/themes/othy/motha
+type: application/json
+version: 1.0.0
